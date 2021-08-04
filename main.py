@@ -15,22 +15,37 @@ images = ['dog.gif', 'cat.gif', 'bird.gif', 'mouse.gif', 'cow.gif',
 @app.route('/', methods=['GET', 'POST'])
 
 def show_grid():
+    noises = {
+    "dog":"Dog goes 'woof'",
+    "cat":"Cat goes 'meow'",
+    "bird":"Bird goes 'tweet'",
+    "mouse":"Mouse goes 'squeak'",
+    "cow":"cow goes 'moo'",
+    "frog":"Frog goes 'croak'",
+    "elephant":"the elephant goes 'toot'",
+    "duck":"ducks say 'quack'",
+    "fox":"What Does the fox say?"}
+    display_noise = 'Click on an animal to find out what it says'
+
     if request.method == 'POST':
-        pass
-    else:
-        noises = {
-        "dog":"Dog goes 'woof'",
-        "cat":"Cat goes 'meow'",
-        "bird":"Bird goes 'woof'",
-        "mouse":"Mouse goes 'squeak'",
-        "cow":"cow goes 'moo'",
-        "frog":"Frog goes 'croak'",
-        "elephant":"the elephant goes 'toot'",
-        "duck":"ducks say 'quack'",
-        "fox":"What Does the fox say?"}
-        animals_list = list(noises.keys())
+        
+        name_value = request.form['animal_selection']
+        
+        print(name_value)
+
+        display_noise = noises[name_value]
+
+
+        # choice = int(request.form['choice'])    # Collect the radio button value from the form.
+        # old_steps = request.form['steps']       # Retrieve the old 'steps' string from the webpage. 
+        # steps = f"{old_steps}-{choice}"     # Generate a new 'steps' string.
+        # image = images[choice]              # Assign a file name from the images list.
+        # choices = fill_choices(choice)      # Call the fill_choices() function, which returns a dictionary of the allowed directions and values for the new box.
+    
+    
+    animals_list = list(noises.keys())
       
-    return render_template('index.html', noises = noises , animals_list=animals_list, images = images)
+    return render_template('index.html', noises = noises , animals_list=animals_list, images = images, display_noise = display_noise)
 
 if __name__ == '__main__':
     app.run()
