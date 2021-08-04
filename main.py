@@ -8,7 +8,8 @@ app.config['DEBUG'] = True
 # images = ['grid_0.png', 'grid_1.png', 'grid_2.png', 'grid_3.png', 'grid_4.png',
 #     'grid_5.png', 'grid_6.png', 'grid_7.png', 'grid_8.png']
 
-
+images = ['dog.gif', 'cat.gif', 'bird.gif', 'mouse.gif', 'cow.gif',
+    'frog.gif', 'elephant.gif', 'duck.gif', 'fox.gif']
     
 
 @app.route('/', methods=['GET', 'POST'])
@@ -29,7 +30,7 @@ def show_grid():
         "fox":"What Does the fox say?"}
         animals_list = list(noises.keys())
       
-    return render_template('index.html', noises = noises , animals_list=animals_list)
+    return render_template('index.html', noises = noises , animals_list=animals_list, images = images)
 
 if __name__ == '__main__':
     app.run()
