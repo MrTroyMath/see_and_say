@@ -73,3 +73,12 @@ li, p {
 .responsive {
     width: 90%;
 }
+
+td{
+    width: 1px;
+    height: auto;
+}
+
+img {
+  width: 60% 
+}
