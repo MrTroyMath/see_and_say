@@ -73,3 +73,20 @@ li, p {
 .responsive {
     width: 90%;
 }
+
+/* not currently working */
+td{
+    /* color: blue; */
+    width: 1px; 
+    height: auto;
+}
+
+table{
+    background-color: cadetblue;
+}
+
+img {
+  max-width: 60%;
+  text-align: center;
+  vertical-align: center;
+}
