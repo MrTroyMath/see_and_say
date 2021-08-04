@@ -74,11 +74,16 @@ li, p {
     width: 90%;
 }
 
+/* not currently working */
 td{
-    width: 1px;
+    /* color: blue; */
+    width: 1px; 
     height: auto;
 }
 
+
 img {
-  width: 60% 
+  width: 60%;
+  text-align: center;
+  vertical-align: center;
 }
