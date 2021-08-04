@@ -72,4 +72,16 @@ li, p {
 
 .responsive {
     width: 90%;
+<<<<<<< HEAD
+=======
+}
+
+td{
+    width: 1px;
+    height: auto;
+}
+
+img {
+  width: 60% 
+>>>>>>> abby-branch
 }
