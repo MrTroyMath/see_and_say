@@ -19,7 +19,7 @@ def show_grid():
     "frog":"Frog goes 'croak'",
     "elephant":"the elephant goes 'toot'",
     "duck":"ducks say 'quack'",
-    "fox":"What Does the fox say?"}
+    "fox":"What Does the fox say?\tRing-ding-ding-ding-dingeringeding!\nGering-ding-ding-ding-dingeringeding!\n Gering-ding-ding-ding-dingeringeding!"}
     
     # Creates a default display noise 
     display_noise = 'Click on an animal to find out what it says'

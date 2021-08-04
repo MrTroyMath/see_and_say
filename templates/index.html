@@ -12,9 +12,9 @@
         <table style="width:50%" align="center">
             {% for index in range(animals_list|length) %}
             {% if index%3==0 %}
-            <tr style="width: 50px;">
-              <td style="background-color: blueviolet;"><img src ="{{ url_for('static', filename=images[index]) }}" alt= '{{images[index]}}'><button value = "{{animals_list[index]}}" name = "animal_selection">{{animals_list[index]}}</button></td>
-              <td style="background-color: maroon;"><img src ="{{ url_for('static', filename=images[index+1]) }}" alt= '{{images[index+1]}}'><button value = "{{animals_list[index+1]}}" name = "animal_selection">{{animals_list[index+1]}}</button></td>
+            <tr>
+              <td><img src ="{{ url_for('static', filename=images[index]) }}" alt= '{{images[index]}}'><button value = "{{animals_list[index]}}" name = "animal_selection">{{animals_list[index]}}</button></td>
+              <td><img src ="{{ url_for('static', filename=images[index+1]) }}" alt= '{{images[index+1]}}'><button value = "{{animals_list[index+1]}}" name = "animal_selection">{{animals_list[index+1]}}</button></td>
               <td><img src ="{{ url_for('static', filename=images[index+2]) }}" alt= '{{images[index+2]}}'><button value = "{{animals_list[index+2]}}" name = "animal_selection">{{animals_list[index+2]}}</button></td>
             </tr>
             {% endif %}
