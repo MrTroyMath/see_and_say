@@ -8,7 +8,17 @@ images = ['grid_0.png', 'grid_1.png', 'grid_2.png', 'grid_3.png', 'grid_4.png',
     'grid_5.png', 'grid_6.png', 'grid_7.png', 'grid_8.png']
 
 def fill_choices(index):
-    options = {}
+    noises = {
+        "dog":"Dog goes 'woof'",
+        "cat":"Cat goes 'meow'",
+        "bird":"Bird goes 'woof'",
+        "mouse":"Mouse goes 'squeak'",
+        "cow":"cow goes 'moo'",
+        "frog":"Frog goes 'croak'",
+        "elephant":"the elephant goes 'toot'",
+        "duck":"ducks say 'quack'",
+        "fox":"What Does the fox say?",
+    }
     if index in [1, 2, 4, 5, 7, 8]:
         options['Left'] = index-1
     elif index == 3:
