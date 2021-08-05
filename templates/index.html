@@ -15,8 +15,14 @@
          
             {% endfor %}
           </table>
+          {% if session['animals_selected']|length >0 %}
+          
           {% for animal in session["animals_selected"] %}
           <h2>{{animal}}</h2>
           {% endfor %}
+          {%else%}
+          <h2>Pick an animal to see what it says!</h2>
+
+          {%endif%}
 
 {% endblock %}

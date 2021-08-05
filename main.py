@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, session
+
 import random
 
 app = Flask(__name__)
@@ -33,10 +34,12 @@ def show_grid():
     elif request.method == 'POST':
         
         name_value = request.form['animal_selection']
-        
+        if name_value not in noises.keys():
+            display_noise = f"I don't know what a {name_value} says"
+        else:
         # print(name_value) #would display to terminal
 
-        display_noise = noises[name_value]
+            display_noise = noises[name_value]
         ani_list = session["animals_selected"]
         # print(ani_list, session["animals_selected"])
         ani_list.append(display_noise)
