@@ -1,6 +1,16 @@
 body {
     font-size: 14pt;
 }
+button {
+    width: 300px;
+}
+.verticalhorizontal {
+    display: table-cell;
+    height: 300px;
+    text-align: center;
+    width: 300px;
+    vertical-align: middle;
+}
 
 form {
     margin: 10px;

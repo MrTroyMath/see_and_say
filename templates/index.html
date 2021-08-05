@@ -2,10 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>See and Say</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{ url_for('static', filename='style.css') }}"rel="stylesheet" type="text/css" />
-    </head>
+</head>
 
     <body>
        <form method = "POST">
@@ -13,9 +12,9 @@
             {% for index in range(animals_list|length) %}
             {% if index%3==0 %}
             <tr>
-              <td><img src ="{{ url_for('static', filename=images[index]) }}" alt= '{{images[index]}}'><button value = "{{animals_list[index]}}" name = "animal_selection">{{animals_list[index]}}</button></td>
-              <td><img src ="{{ url_for('static', filename=images[index+1]) }}" alt= '{{images[index+1]}}'><button value = "{{animals_list[index+1]}}" name = "animal_selection">{{animals_list[index+1]}}</button></td>
-              <td><img src ="{{ url_for('static', filename=images[index+2]) }}" alt= '{{images[index+2]}}'><button value = "{{animals_list[index+2]}}" name = "animal_selection">{{animals_list[index+2]}}</button></td>
+              {% for num in range(3) %}
+              <td valign = "bottom"><section style = "text-align: center;"><img src ="{{ url_for('static', filename=images[index+num])}}"  alt= '{{images[index+num]}}'><br><button value = "{{animals_list[index +num]}}" name = "animal_selection" >{{animals_list[index +num]}}</button></section></td>
+              {% endfor %}
             </tr>
             {% endif %}
          
