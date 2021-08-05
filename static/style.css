@@ -1,6 +1,16 @@
 body {
     font-size: 14pt;
 }
+button {
+    width: 300px;
+}
+.verticalhorizontal {
+    display: table-cell;
+    height: 300px;
+    text-align: center;
+    width: 300px;
+    vertical-align: middle;
+}
 
 form {
     margin: 10px;
@@ -48,6 +58,7 @@ li, p {
 .head-background {
     padding: 10px 0;
     text-align: center;
+    color: rgb(255, 255, 255);
     background-image: linear-gradient(to right, #419f6a, #3c79b8);
     border-radius: 8px;
 }
